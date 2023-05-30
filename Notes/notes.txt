@@ -1,0 +1,20 @@
+The order in which CSS is written in matters such that the one that comes last will overwrite the previous.
+
+
+CSS Specificity: When adding multiple styles to the same elements, the most specific css selection will triumph. 
+                 Remember the following order: ID > Class > Element. ID is king when choosing css selectors.
+
+    ex: post button hovers turns it blue (button.post:hover{color:blue}) 
+        and post button active turns it gold (button.post:active{color:gold}), 
+        this 'might' conflict bc they're both the same level of specific. 
+
+    For more check out a Specificity calculator. 
+
+Inline styles (styles added to html files within the element declaration) have even higher priority than IDs and should 
+    generally be avoided as it may lead to confusion.
+
+!important: 
+    The "!important" css attribute is the exception to specificity and will take absolute priority over anything else 
+    in the stylesheet.
+
+        Warning: This should not be used in plugins/mashups/site-wide css 

@@ -1,0 +1,112 @@
+
+body{
+    background-color: #f5ebe0;
+}
+
+section.post:nth-of-type(2n){
+    background-color: #e3d5ca;
+    width: 100%;
+}
+
+button#post{
+    background-color: #ffb4a2;
+    padding:10px;
+}
+
+button#post:hover{
+    background-color: darkturquoise;
+}
+
+button#signUp:hover{
+    background-color: darkturquoise;
+}
+
+button#signUp:active{
+    background-color: gold;
+}
+
+button#signUp{
+    background-color: darkblue;
+    color:white;
+    padding:10px
+}
+
+button#post:active{
+    background-color: gold;
+}
+
+h1, h2{
+    color: #6b705c
+}
+
+
+/*
+    Adjacent Combinator: (h2 + button) -> any button immediately after an h2 
+*/
+h2 + button {
+    font-size: 15px;
+}
+
+/* 
+    Descendant Combinator: (.post a -> any anchor tag within .post)
+        Will point to any element nested within a parent element/class/id 
+
+    Direct-descendant Selector: (p > a) Any anchor within a p tag can be combined with descendant combinator
+*/
+.post p>a{
+    color:deeppink
+}
+
+.post p>a:hover{
+    color: darkorchid
+}
+
+hr{
+    color:grey;
+    inline-size: auto;
+}
+
+.tag{
+    background-color: red;
+    color: white;
+    font-size: medium;
+}
+
+input + button{
+    background-color: coral;
+    padding:10px
+}
+
+input+button:hover{
+    background-color: #bbd0ff;
+}
+
+input+button:active{
+    background-color: gold;
+}
+
+input[type="password"]{
+    color:purple;
+    padding:10px
+}
+
+input[type="text"]{
+    color:purple;
+    padding:10px
+}
+
+a[href*="about" i]{
+    color:blueviolet
+}
+
+/*Pseudo Elements
+    ::after, ::before, ::first-letter, first-line, ::selection
+*/
+
+h2::first-letter{
+    font-size:43px
+}
+
+p::selection, h2::selection{
+    background-color:orange
+}

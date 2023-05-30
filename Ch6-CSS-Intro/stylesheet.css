@@ -1,0 +1,28 @@
+h1{
+    color:red
+}
+
+#Sub:hover{
+    background-color: cyan;
+    color:darkred;
+}
+
+#Sub:active{
+    background-color: gold;
+    color:green
+}
+
+#Sub{
+    color:blanchedalmond;
+    background-color: darkolivegreen;
+    font-family: cursive;
+}
+
+input[type="password"]{
+    background-color: indigo;
+    color: honeydew;
+}
+
+input[type="radio"]:checked{
+    box-shadow: 0 0 0 3px red;
+}
