@@ -36,5 +36,32 @@ div {
 #fixed #middle {
     position: fixed;
     top: 0;
-    left: 400px;
+    left: 0;
+    right: 0;
+    height: 10vh;
+    width: 95vw;
+    
+}
+
+#burger {
+    align-items: center;
+    padding: 2vh 3vw;
+    margin: 1em;
+    border-radius: 15%;
+    transition: 0.13s;
+    font-size: medium;
+}
+
+#burger:hover {
+    border-radius: 42%;
+    border-color: navy;
+    box-shadow: -0.5em  #81b29a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#burger:active {
+    border-radius: 42%;
+    border-color: navy;
+    box-shadow: -0.5em  #81b29a;
+    background-color: skyblue;
 }
