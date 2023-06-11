@@ -58,7 +58,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    line-height: 1.5;
 }
 
 html{ 
@@ -69,7 +68,7 @@ html{
 .panel {
     background-color: white;
     border-radius: 10px;
-    padding: 15px 20px;
+    padding: 15px 25px;
     width: 100%;
     max-width: 960px;
     display: flex;
@@ -92,7 +91,7 @@ html{
 
 .pricing-header{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     color: #888;
     letter-spacing: 1px;
 }
@@ -108,7 +107,8 @@ html{
     font-size: 12px;
     letter-spacing: 1px; 
     padding: 15px 0;
-    border-top: 1px solid #e1f1ff
+    border-top: 1px solid #e1f1ff;
+    line-height: 1.5;
 }
 
 .pricing-features li:last-child{
@@ -120,7 +120,7 @@ html{
     display: block;
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 
 }
 
@@ -132,7 +132,7 @@ html{
     text-decoration: none;
     display:inline-block;
     margin: 25px 0;
-    padding: 8px 25px;
+    padding: 15px 35px;
     transition: background-color 200ms ease-in-out;
 }
 
