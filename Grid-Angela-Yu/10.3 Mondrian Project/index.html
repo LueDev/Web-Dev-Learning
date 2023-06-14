@@ -19,11 +19,86 @@
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
     */
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      margin: 50px auto;
+    }
+
+    .wrapper{
+      display: grid;
+      background-color: #232629;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 20px;
+      gap: 9px;
+      /* background-color: black; */
+    }
+
+    .item{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-display: none;
+      background-color: #F0F1EC;
+    }
+
+    .red{
+      background-color: #E72F24;
+      
+    }
+
+    .cream-1{grid-column: 2/-1;}
+
+    .cream-2{grid-row: 2/4; order:1;}
+
+    .cream-3{grid-area: 2 / 2 / 4 / 4; order:1;}
+
+    .cream-4{order: 2; grid-row: 3 / 5}
+
+    .cream-5{order: 2;}
+
+    .yellow{
+      background-color: #F9D01E;
+      order:2;
+    }
+
+    .black{
+      background-color: #232629;
+      color: white;
+      order:2;
+    }
+
+    .blue{
+      background-color: #004592;
+      color:white;
+      order:1;
+      border-bottom: 10px solid black;
+    }
+
+    /*HIDING THE TEXT TO COMPLETE THE PROJECT*/
+    .item{
+      color:transparent;
+    }
+
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
+  <div class="wrapper">
+    <div class="item red">red</div>
+    <div class="item cream cream-1">cream 1</div>
+    <div class="item cream cream-2">cream 2</div>
+    <div class="item cream cream-3">cream 3</div>
+    <div class="item cream cream-4">cream 4</div>
+    <div class="item cream cream-5">cream 5</div>
+    <div class="item yellow">yellow</div>
+    <div class="item blue">blue</div>
+    <div class="item black">black</div>
+  </div>
 </body>
 
 </html>
