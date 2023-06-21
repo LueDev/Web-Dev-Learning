@@ -25,4 +25,13 @@
 .profile-img {
   height: 100px;
   border-radius: 50%;
+
+}
+
+.svglogo{
+  margin-bottom: 4px;
+}
+
+.testimonials img{
+  height:30px;
 }

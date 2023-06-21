@@ -1,0 +1,22 @@
+Principles of Typography: 
+
+1. Color Theory: https://colorhunt.co/palettes/summer
+2. Typography: Sans Serif 
+3. Principles of UI:
+    1. Hierarchy through size of elements.
+    2. Layout of elements to add emphasis to call to action and main messages
+    3. Alignment of elements in sections to represent cohesive design.
+    4. White space to present products/information cleaner/minimalist (ex: luxury handbags) 
+    5. Audience: cater the website to the audience who you intend to reach.
+4. Principles of UX: 
+    1. Simplicity of the site
+    2. Consistency of layouts, styles, fonts, and alignments
+    3. Reading patterns: F and Z patterns predominantly
+    4. Cross-Platform design: Design for watch, mobile, laptop, desktop, tv, and wider screens in mind depending on the nature of the site.
+5. Dark Patterns: Using Reading/Style/Text that would only benefit the company, not the user. Mainly, this will add sneaky/hard-to-read terms that benefit the company.
+                  This practice is typically frowned upon and leads to very little user retention.
+
+
+The Design I made on Canva after learning the principles of UI/UX
+
+https://www.canva.com/design/DAFmTpoCvsY/5WyQ8vs4iAJHqwhKYmnv5w/watch?utm_content=DAFmTpoCvsY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
