@@ -28,4 +28,4 @@ const titles = movies.map(function (movie) {
     return movie.title.toUpperCase();
 })
 
-
+const ratings = movies.map(movie => `${movie.title} - ${movie.score / 10}`)
