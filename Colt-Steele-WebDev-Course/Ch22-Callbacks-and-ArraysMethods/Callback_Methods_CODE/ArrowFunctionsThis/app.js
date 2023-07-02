@@ -48,6 +48,10 @@ In summary, arrow functions have a lexical this binding, which means they inheri
 context, while non-arrow functions have a dynamically bound this value, which is determined by the calling context.
 */
 
+/*
+Traditional (non-arrow) functions 'this' keyword relates to where the func is executed, not created.
+Arrow Funcs 'this' keyword relates to where it is created bc it inherits the 'this' value from the surrounding/parent func. 
+*/
 
 const person = {
     firstName: 'Viggo',
