@@ -1,0 +1,122 @@
+<%- include('../partials/head')%>
+<%- include('../partials/navbar')%>
+<body>
+
+    <div class="container-fluid">
+        <h1>Todo List</h1>
+        
+
+        <form action="/tasks" method="post">
+            <section>
+                <label for="newTask">New Task</label>
+                <br>
+                <textarea id="newTask" cols="30" rows="1" name="newTask" placeholder="Enter a new task..."></textarea>
+            </section>
+            <button class="p-1.5 text-bg-primary rounded-3 edit">Submit</button>
+        </form>
+        <br><br><br>
+    </div>
+
+    <!--ACTIVE TASKS TABLE-->
+    <div class="container-fluid">
+        <div class="table-responsive small">
+            <h1>Active Tasks</h1>
+            <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Task</th>
+                <th scope="col">Created</th>
+                <th scope="col">Completed</th>
+                <th scope="col">Completed Time</th>
+                <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let task of tasks) {%>
+                    <tr>
+                        <td><%= task.id %></td>
+                        <td>
+                            <!-- replacing EJS < % = task.name % > with a built-in textarea instead -->
+                            <!-- action="/tasks/< % = task.id % >?_method=PATCH -->
+                            <form id="taskUpdate-<%= task.id %>" action="/tasks/<%= task.id %>" method="post" >
+                                <textarea name="taskUpdate" id="taskUpdate" cols="20" rows="1"><%=task.name %></textarea>
+                            </form>
+                            Currently saved as: <%= task.name %>
+                        </td>
+                        <td><%= task.createdTime %></td>
+                        <td><%= task.completed %></td>
+                        <td><%= task.completedTime %></td>
+                        <td>
+                            <button type="submit" form="taskUpdate-<%= task.id %>" class="p-1.5 text-bg-primary rounded-3 edit">Update</button>
+                            
+                            <!--Mark Complete button form-->
+                            <form id="taskUpdate-<%= task.id %>"action="/tasks/<%= task.id %>/completed" method="post">
+                                <button class="p-1.5 text-bg-success rounded-3 complete">Mark Complete</button>
+                            </form>
+
+                            <!-- DELETE Button form-->
+                            <form id="taskUpdate-<%= task.id %>"action="/tasks/<%= task.id %>/delete?_method=DELETE" method="POST">
+                                <button class="p-1.5 text-bg-danger rounded-3 delete">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+<br><br><br>
+
+<!--COMPLETED TASKS TABLE -->
+    <div class="container-fluid">
+        <div class="table-responsive small">
+            <h1>Completed Tasks</h1>
+            <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Task</th>
+                <th scope="col">Created</th>
+                <th scope="col">Completed</th>
+                <th scope="col">Completed Time</th>
+                <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let task of completedTasks) {%>
+                    <tr>
+                        <td><%= task.id %></td>
+                        <td>
+                            <!-- replacing EJS < % = task.name % > with a built-in textarea instead -->
+                            <!-- action="/tasks/< % = task.id % >?_method=PATCH -->
+                            <form id="taskUpdate-<%= task.id %>" action="/tasks/completed/<%= task.id %>" method="post" >
+                                <textarea name="taskUpdate" id="taskUpdate" cols="20" rows="1"><%=task.name %></textarea>
+                            </form>
+                            Currently saved as: <%= task.name %>
+                        </td>
+                        <td><%= task.createdTime %></td>
+                        <td><%= task.completed %></td>
+                        <td><%= task.completedTime %></td>
+                        <td>
+                            <button type="submit" form="taskUpdate-<%= task.id %>" class="p-1.5 text-bg-primary rounded-3 edit">Update</button>
+                            
+                            <!--Mark Complete button form-->
+                            <form id="taskUpdate-<%= task.id %>"action="/tasks/<%= task.id %>/incomplete" method="post">
+                                <button class="p-1.5 text-bg-success rounded-3 complete">Mark Incomplete</button>
+                            </form>
+
+                            <!-- DELETE Button form-->
+                            <form id="taskUpdate-<%= task.id %>"action="/tasks/completed/<%= task.id %>/delete?_method=DELETE" method="POST">
+                                <button class="p-1.5 text-bg-danger rounded-3 delete">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    
+<%- include('../partials/footer')%>
