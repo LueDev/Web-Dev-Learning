@@ -1,0 +1,30 @@
+<div class="container-fluid">
+        <div class="table-responsive small">
+            <h1>Active Tasks</h1>
+            <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Task</th>
+                <th scope="col">Added</th>
+                <th scope="col">Completed</th>
+                <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let task of tasks) {%>
+                    <tr><td><%= task.id %></td>
+                        <td><%= task.name %></td>
+                        <td><%= task.createdTime %></td>
+                        <td><%= task.completed %></td>
+                        <td>
+                            <button class="p-1.5 text-bg-primary rounded-3 edit">Edit</button>
+                            <button class="p-1.5 text-bg-success rounded-3 complete">Mark Complete</button>
+                            <button class="p-1.5 text-bg-danger rounded-3 delete">Delete</button>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+            </table>
+        </div>
+    </div>

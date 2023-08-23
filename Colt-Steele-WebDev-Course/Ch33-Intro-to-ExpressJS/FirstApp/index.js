@@ -3,6 +3,7 @@
 const express = require("express");
 const app = express();
 
+// The use() func returns when any endpoint is requested. 
 // app.use((req, res) => {
 //     console.log("WE GOT A NEW REQUEST!!")
 //     res.send('<h1>This is my webpage!</h1>')
